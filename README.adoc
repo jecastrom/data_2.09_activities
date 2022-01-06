@@ -62,6 +62,14 @@ image::{image-url-ironhack}[width=70]
 
 toc::[]
 
+= Activity
+
+* In this activity, we will be using the table `district` from the `bank` database and according to the description for the different columns:
+
+. Create the connection between SQL and Python and extract all the information from the `loan` table where the status is either `A` or `B`.
+
+. Use the executable class to run the query/queries. You can test the query/queries in SequelPro or Workbench and then use them with Python.
+
 
 
 
