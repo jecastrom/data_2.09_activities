@@ -1,4 +1,4 @@
-= Activity 1 to 4 Python-SQL Connection and Classification Models 2-09
+= Activity 1 to 4 Python-SQL Connection and Classification Models 2_09
 :stylesheet: boot-darkly.css
 :linkcss: boot-darkly.css
 :image-url-ironhack: https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png
@@ -86,7 +86,7 @@ toc::[]
 
 bla bla blafootnote:[{fn-xxx}]
 
-xref:Activity-1-to-4-Python-SQL-Connection-and-Classification-Models-2-09[Top Section]
+xref:Activity-1-to-4-Python-SQL-Connection-and-Classification-Models-2_09[Top Section]
 
 xref:Last-section[Bottom section]
 
