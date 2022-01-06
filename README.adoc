@@ -63,6 +63,12 @@ image::{image-url-ironhack}[width=70]
 toc::[]
 
 
+
+
+====
+''''
+====
+
 {related-content}[Related content: Lab 9]
 
 ====
