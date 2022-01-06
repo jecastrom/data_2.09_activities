@@ -70,6 +70,24 @@ toc::[]
 
 . Use the executable class to run the query/queries. You can test the query/queries in SequelPro or Workbench and then use them with Python.
 
+== Activity
+
+. Pick any two queries from the queries that we have written so far and execute them in Python. The objective is to retrieve the data into a dataframe.
+
+== Activity
+
+* Analyze transformed data
+
+. How many new columns have been created?
+
+== Activity
+
+* Understand the confusion matrix. Discuss the type 1 and 2 errors. Which one are we making? Which one is worse in our scenario?
+
+Try `normalize : {'true', 'pred', 'all'}, default=None`. Normalizes confusion matrix over the true (rows), predicted (columns) conditions or all the population.
+
+
+
 
 
 
