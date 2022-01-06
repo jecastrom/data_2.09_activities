@@ -5,6 +5,7 @@
 :my-name: Jorge Castro DAPT NOV2021
 :description: SQL queries Activities
 //:script-url: ADD SCRIPT URL HERE 
+:related-content: https://github.com/jecastrom/lab-sql-9.git
 :toc:
 :toc-title: Activities | Description:
 :toc-placement!:
@@ -62,16 +63,7 @@ image::{image-url-ironhack}[width=70]
 toc::[]
 
 
-
-
-
-
-
-
-
-
-
-
+{related-content}[Related content: Lab 9]
 
 ====
 ''''
