@@ -84,7 +84,7 @@ toc::[]
 ''''
 ====
 
-bla bla blafootnote:[{fn-xxx}]
+//bla bla blafootnote:[{fn-xxx}]
 
 xref:Activity-1-to-4-Python-SQL-Connection-and-Classification-Models-2_09[Top Section]
 
