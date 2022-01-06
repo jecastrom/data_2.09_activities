@@ -62,7 +62,7 @@ image::{image-url-ironhack}[width=70]
 
 toc::[]
 
-= Activity
+== Activity
 
 * In this activity, we will be using the table `district` from the `bank` database and according to the description for the different columns:
 
