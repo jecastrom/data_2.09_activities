@@ -193,11 +193,22 @@ image::https://user-images.githubusercontent.com/63274055/148641884-7b00bc7e-0e8
 
 . How many new columns have been created?
 
+`*_Answer:_*`
+
+https://github.com/jecastrom/data_2.09_activities/blob/master/2.09%20Activities.ipynb[Go to the jupyter notebook]
+
+
+
 == Activity
 
 * Understand the confusion matrix. Discuss the type 1 and 2 errors. Which one are we making? Which one is worse in our scenario?
 
 Try `normalize : {'true', 'pred', 'all'}, default=None`. Normalizes confusion matrix over the true (rows), predicted (columns) conditions or all the population.
+
+`*_Answer:_*`
+
+https://github.com/jecastrom/data_2.09_activities/blob/master/2.09%20Activities.ipynb[Go to the jupyter notebook]
+
 
 
 
