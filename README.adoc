@@ -68,11 +68,124 @@ toc::[]
 
 . Create the connection between SQL and Python and extract all the information from the `loan` table where the status is either `A` or `B`.
 
+`*_Answer:_*`
+
+```python
+from sqlalchemy import create_engine
+import pandas as pd
+import getpass
+```
+
+```python
+DATABASE_LOCATION = 'mysql+pymysql://root:' + password + '@localhost/bank'
+password = getpass.getpass()
+query1 = """
+SELECT * 
+FROM loan a
+WHERE a.status in ('A','B');
+"""
+```
+
+```python
+engine = create_engine(DATABASE_LOCATION)
+mydata = pd.read_sql_query(query1, engine)
+mydata.head()
+```
+
+
+
+image::https://user-images.githubusercontent.com/63274055/148641629-a216927f-c7f1-422c-bafa-0d8a2716ebb3.png[width=800]
+
+image::https://user-images.githubusercontent.com/63274055/148641738-d722f7a8-84a8-4b5b-b78b-4909211c51a0.png[width=800]
+
+
+
 . Use the executable class to run the query/queries. You can test the query/queries in SequelPro or Workbench and then use them with Python.
+
+`*_Answer:_*`
+
+```python
+result = engine.execute(query1)
+
+rows = [list(row) for row in result]
+pd.DataFrame(rows)
+```
+
+image::https://user-images.githubusercontent.com/63274055/148641802-0d44a49f-31d8-47d3-97e9-3693a5d11f2e.png[width=800]
+
+
 
 == Activity
 
 . Pick any two queries from the queries that we have written so far and execute them in Python. The objective is to retrieve the data into a dataframe.
+
+`*_Answer:_*`
+
+```python
+query2 ="""
+SELECT
+  b.loan_id,
+  c.a1 AS district_id,
+  c.a11 AS average_salary,
+  c.a13 AS district_jobless_rate,
+  c.a16 AS distr_crimes_per_year 
+FROM
+  account a 
+  INNER JOIN
+    loan b 
+    ON a.account_id = b.account_id 
+  INNER JOIN
+    district c 
+    ON a.district_id = c.a1;
+"""
+```
+
+```python
+query3 = """
+SELECT district_id,
+       loan_id,
+       district.a2 AS district_name,
+       sum(loan.amount) AS total_amount_borrowed,
+       floor(avg(loan.amount)) AS average_loan,
+       (case
+            when status = 'A' then
+                count(status)
+            else
+                0
+        end
+       ) as loans_status_A,
+       (case
+            when status = 'B' then
+                count(status)
+            else
+                0
+        end
+       ) as loans_status_B
+FROM loan
+    INNER JOIN account
+        ON loan.account_id = account.account_id
+    INNER JOIN district
+        ON account.district_id = district.a1
+GROUP BY 1
+ORDER BY 3 DESC;
+
+"""
+```
+
+```python
+mydata2 = pd.read_sql_query(query2, engine)
+mydata2.head()
+
+mydata3 = pd.read_sql_query(query3, engine)
+mydata3.head()
+```
+
+image::https://user-images.githubusercontent.com/63274055/148641931-3592dda3-0d1a-4f01-85b3-37c1c61449a6.png[width=800]
+
+image::https://user-images.githubusercontent.com/63274055/148641948-f41d7c42-a234-420d-9340-928bd91e1904.png[width=800]
+
+
+image::https://user-images.githubusercontent.com/63274055/148641884-7b00bc7e-0e87-4acf-9663-a23e788f09b1.png[width=800]
 
 == Activity
 
