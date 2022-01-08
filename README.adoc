@@ -226,7 +226,6 @@ https://github.com/jecastrom/data_2.09_activities/blob/master/2.09%20Activities.
 ====
 
 
-{script-url}[Solutions script only]
 
 ====
 ''''
